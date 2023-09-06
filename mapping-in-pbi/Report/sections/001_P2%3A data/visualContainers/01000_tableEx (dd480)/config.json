@@ -1,0 +1,169 @@
+{
+  "name": "dd480e894bbdda5c7549",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 16,
+        "y": 32,
+        "z": 1000,
+        "width": 592,
+        "height": 592,
+        "tabOrder": 1000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "tableEx",
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "population.GEOGRAPHY_CODE"
+        },
+        {
+          "queryRef": "population.GEOGRAPHY_NAME"
+        },
+        {
+          "queryRef": "Sum(population.OBS_VALUE)"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "p",
+          "Entity": "population",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "GEOGRAPHY_CODE"
+          },
+          "Name": "population.GEOGRAPHY_CODE",
+          "NativeReferenceName": "GEOGRAPHY_CODE"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "GEOGRAPHY_NAME"
+          },
+          "Name": "population.GEOGRAPHY_NAME",
+          "NativeReferenceName": "GEOGRAPHY_NAME"
+        },
+        {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "p"
+                  }
+                },
+                "Property": "OBS_VALUE"
+              }
+            },
+            "Function": 0
+          },
+          "Name": "Sum(population.OBS_VALUE)",
+          "NativeReferenceName": "Sum of OBS_VALUE"
+        }
+      ],
+      "OrderBy": [
+        {
+          "Direction": 1,
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Source": "p"
+                }
+              },
+              "Property": "GEOGRAPHY_NAME"
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "grid": [
+        {
+          "properties": {}
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ContrastAlternatingRows'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "objects": {
+    "shape": [
+      {
+        "properties": {
+          "map": {
+            "geoJson": {
+              "type": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'packaged'"
+                  }
+                }
+              },
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'lbth-wards-2022.topo.json'"
+                  }
+                }
+              },
+              "content": {
+                "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "lbth-wards-2022.topo291879894662858.json"
+                  }
+                }
+              }
+            }
+          },
+          "projectionEnum": {
+            "expr": {
+              "Literal": {
+                "Value": "'albersUsa'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "dataPoint": [
+      {
+        "properties": {
+          "fillRule": {
+            "linearGradient2": {
+              "min": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'minColor'"
+                    }
+                  }
+                }
+              },
+              "max": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'maxColor'"
+                    }
+                  }
+                }
+              },
+              "nullColoringStrategy": {
+                "strategy": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'asZero'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "defaultColors": [
+      {
+        "properties": {
+          "defaultShow": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Tooltips": [
+      0
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "First GEOGRAPHY_CODE",
+        "Name": "Min(NM_2021_1 data csv?date=latest&geography=641730979   641730990,641730994,6417309.GEOGRAPHY_CODE)",
+        "Type": 2048
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Tooltips",
+          "Projection": 0,
+          "isActive": false
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "First GEOGRAPHY_CODE",
+      "queryName": "Min(NM_2021_1 data csv?date=latest&geography=641730979   641730990,641730994,6417309.GEOGRAPHY_CODE)",
+      "roles": {
+        "Tooltips": true
+      },
+      "type": {
+        "category": null,
+        "underlyingType": 1
+      },
+      "expr": {
+        "Aggregation": {
+          "Expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "population"
+                }
+              },
+              "Property": "GEOGRAPHY_CODE"
+            }
+          },
+          "Function": 3
+        }
+      }
+    }
+  ]
+}

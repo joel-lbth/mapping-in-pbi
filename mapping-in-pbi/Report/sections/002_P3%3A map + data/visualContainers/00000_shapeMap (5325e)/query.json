@@ -1,0 +1,123 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "n",
+              "Entity": "population",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "n"
+                      }
+                    },
+                    "Property": "GEOGRAPHY_CODE"
+                  }
+                },
+                "Function": 3
+              },
+              "Name": "Min(NM_2021_1 data csv?date=latest&geography=641730979   641730990,641730994,6417309.GEOGRAPHY_CODE)",
+              "NativeReferenceName": "First GEOGRAPHY_CODE"
+            },
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "n"
+                      }
+                    },
+                    "Property": "OBS_VALUE"
+                  }
+                },
+                "Function": 0
+              },
+              "Name": "Sum(population.OBS_VALUE)",
+              "NativeReferenceName": "Sum of OBS_VALUE"
+            },
+            {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Source": "n"
+                  }
+                },
+                "Property": "GEOGRAPHY_CODE"
+              },
+              "Name": "population.GEOGRAPHY_CODE",
+              "NativeReferenceName": "GEOGRAPHY_CODE"
+            }
+          ],
+          "OrderBy": [
+            {
+              "Direction": 2,
+              "Expression": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "n"
+                        }
+                      },
+                      "Property": "OBS_VALUE"
+                    }
+                  },
+                  "Function": 0
+                }
+              }
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            ]
+          },
+          "DataReduction": {
+            "DataVolume": 4,
+            "Primary": {
+              "Top": {}
+            }
+          },
+          "Aggregates": [
+            {
+              "Select": 1,
+              "Aggregations": [
+                {
+                  "Min": {}
+                },
+                {
+                  "Max": {}
+                }
+              ]
+            }
+          ],
+          "SuppressedJoinPredicates": [
+            0
+          ],
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}

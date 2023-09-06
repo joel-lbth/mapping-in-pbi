@@ -1,0 +1,53 @@
+{
+  "Commands": [
+    {
+      "SemanticQueryDataShapeCommand": {
+        "Query": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "n",
+              "Entity": "population",
+              "Type": 0
+            }
+          ],
+          "Select": [
+            {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Source": "n"
+                      }
+                    },
+                    "Property": "GEOGRAPHY_CODE"
+                  }
+                },
+                "Function": 3
+              },
+              "Name": "Min(NM_2021_1 data csv?date=latest&geography=641730979   641730990,641730994,6417309.GEOGRAPHY_CODE)",
+              "NativeReferenceName": "First GEOGRAPHY_CODE"
+            }
+          ]
+        },
+        "Binding": {
+          "Primary": {
+            "Groupings": [
+              {
+                "Projections": [
+                  0
+                ]
+              }
+            ]
+          },
+          "SuppressedJoinPredicates": [
+            0
+          ],
+          "Version": 1
+        },
+        "ExecutionMetricsKind": 1
+      }
+    }
+  ]
+}

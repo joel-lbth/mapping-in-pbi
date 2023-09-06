@@ -1,0 +1,106 @@
+{
+  "name": "0a4ac0202fa76140689a",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 608,
+        "y": 64,
+        "z": 2500,
+        "width": 624,
+        "height": 592,
+        "tabOrder": 1000
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "mapping in power bi",
+                    "textStyle": {
+                      "fontSize": "42.6667px",
+                      "textDecoration": "underline"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "1. how boundaries (e.g. wards) using the ",
+                    "textStyle": {
+                      "fontSize": "32pt"
+                    }
+                  },
+                  {
+                    "value": "shape map",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "32pt"
+                    }
+                  },
+                  {
+                    "value": " visual and the ",
+                    "textStyle": {
+                      "fontSize": "32pt"
+                    }
+                  },
+                  {
+                    "value": "custom map",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "32pt"
+                    }
+                  },
+                  {
+                    "value": " option on a download of the ",
+                    "textStyle": {
+                      "fontSize": "32pt"
+                    }
+                  },
+                  {
+                    "value": "borough topojson",
+                    "textStyle": {
+                      "fontSize": "32pt"
+                    },
+                    "url": "https://gist.githubusercontent.com/joel-lbth/081ff5112ac66e6365a9846a6bc79409/raw/e600ffa61b1177c855e0e0a6c06c1a07e3922b75/lbth-wards.topojson"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

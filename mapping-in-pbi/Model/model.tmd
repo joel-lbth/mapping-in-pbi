@@ -1,0 +1,12 @@
+model Model
+	compatibilityLevel: 1567
+	culture: en-US
+	defaultPowerBIDataSourceVersion: PowerBI_V3
+	sourceQueryCulture: en-GB
+
+annotation PBI_QueryOrder = ["population"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.120.963.0 (23.08)
+

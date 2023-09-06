@@ -1,0 +1,129 @@
+{
+  "name": "f75c18665adcfb95d6a2",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 608,
+        "y": 64,
+        "z": 0,
+        "width": 624,
+        "height": 592,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "mapping in power bi",
+                    "textStyle": {
+                      "fontSize": "42.6667px",
+                      "textDecoration": "underline"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "2. get some data that has a field you can link to the map on (in this case ",
+                    "textStyle": {
+                      "fontSize": "32pt"
+                    }
+                  },
+                  {
+                    "value": "GEOGRAPHY_CODE",
+                    "textStyle": {
+                      "fontFamily": "Consolas",
+                      "fontSize": "32pt"
+                    }
+                  },
+                  {
+                    "value": " in the population data matches",
+                    "textStyle": {
+                      "fontSize": "32pt"
+                    }
+                  },
+                  {
+                    "value": " wardcode",
+                    "textStyle": {
+                      "fontFamily": "Consolas",
+                      "fontSize": "32pt"
+                    }
+                  },
+                  {
+                    "value": " in the map json",
+                    "textStyle": {
+                      "fontSize": "32pt"
+                    }
+                  },
+                  {
+                    "value": ")",
+                    "textStyle": {
+                      "fontSize": "42.6667px"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "in this example we use ",
+                    "textStyle": {
+                      "fontSize": "42.6667px"
+                    }
+                  },
+                  {
+                    "value": "ward population from the 2021 census",
+                    "textStyle": {
+                      "fontSize": "42.6667px"
+                    },
+                    "url": "https://www.nomisweb.co.uk/api/v01/dataset/NM_2021_1.data.csv?date=latest&geography=641730979...641730990,641730994,641730995,641730991...641730993,641730996...641730998&c2021_restype_3=0&measures=20100"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

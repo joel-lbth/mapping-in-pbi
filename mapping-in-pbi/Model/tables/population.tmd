@@ -1,0 +1,286 @@
+table population
+	lineageTag: cbff0382-6930-4f5a-9e3e-380c40b00826
+	ordinal: 2
+
+	partition population = M
+		mode: Import
+		expression:=
+			let
+			    Source = Csv.Document(Web.Contents("https://www.nomisweb.co.uk/api/v01/dataset/NM_2021_1.data.csv?date=latest&geography=641730979...641730990,641730994,641730995,641730991...641730993,641730996...641730998&c2021_restype_3=0&measures=20100"),[Delimiter=",", Columns=28, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+			    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+			    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DATE", Int64.Type}, {"DATE_NAME", Int64.Type}, {"DATE_CODE", Int64.Type}, {"DATE_TYPE", type text}, {"DATE_TYPECODE", Int64.Type}, {"DATE_SORTORDER", Int64.Type}, {"GEOGRAPHY", Int64.Type}, {"GEOGRAPHY_NAME", type text}, {"GEOGRAPHY_CODE", type text}, {"GEOGRAPHY_TYPE", type text}, {"GEOGRAPHY_TYPECODE", Int64.Type}, {"GEOGRAPHY_SORTORDER", Int64.Type}, {"C2021_RESTYPE_3", Int64.Type}, {"C2021_RESTYPE_3_NAME", type text}, {"C2021_RESTYPE_3_CODE", Int64.Type}, {"C2021_RESTYPE_3_TYPE", type text}, {"C2021_RESTYPE_3_TYPECODE", Int64.Type}, {"C2021_RESTYPE_3_SORTORDER", Int64.Type}, {"MEASURES", Int64.Type}, {"MEASURES_NAME", type text}, {"OBS_VALUE", Int64.Type}, {"OBS_STATUS", type text}, {"OBS_STATUS_NAME", type text}, {"OBS_CONF", type text}, {"OBS_CONF_NAME", type text}, {"URN", type text}, {"RECORD_OFFSET", Int64.Type}, {"RECORD_COUNT", Int64.Type}})
+			in
+			    #"Changed Type"
+
+	column DATE
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 87c7cd42-e861-49b8-803b-63603c6cef0c
+		sourceColumn: DATE
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column DATE_NAME
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 95d514a7-75ba-4e6f-a04c-183bbc33dcab
+		sourceColumn: DATE_NAME
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column DATE_CODE
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 5f0e0fec-84f3-41ba-b5bd-2ad2b933316f
+		sourceColumn: DATE_CODE
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column DATE_TYPE
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 31a375e8-0bd4-4bfb-975f-8d1e8ba2c522
+		sourceColumn: DATE_TYPE
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column DATE_TYPECODE
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 99fd7fc5-0fd8-4243-8952-000175ca5e73
+		sourceColumn: DATE_TYPECODE
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column DATE_SORTORDER
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: ab43bfc1-abf6-4197-9306-7b9a9362393c
+		sourceColumn: DATE_SORTORDER
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column GEOGRAPHY
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 4d42a2c8-c8c2-4c8a-8b88-b4f373e438fb
+		sourceColumn: GEOGRAPHY
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column GEOGRAPHY_NAME
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 146e008b-380f-4e1d-9047-ddd80a292be8
+		sourceColumn: GEOGRAPHY_NAME
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column GEOGRAPHY_CODE
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 1d76717c-d93a-4ea3-b8e0-805d2157002a
+		sourceColumn: GEOGRAPHY_CODE
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column GEOGRAPHY_TYPE
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 76610333-02d4-4270-b8e7-3de759c8dcc2
+		sourceColumn: GEOGRAPHY_TYPE
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column GEOGRAPHY_TYPECODE
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: b58bbf8c-f91e-480a-b8b1-78af4440b9ba
+		sourceColumn: GEOGRAPHY_TYPECODE
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column GEOGRAPHY_SORTORDER
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 379313b2-184d-4135-aad2-72dcabf5f4dd
+		sourceColumn: GEOGRAPHY_SORTORDER
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column C2021_RESTYPE_3
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 34fe8c00-14ec-4917-9e75-04a5cbda1e9b
+		sourceColumn: C2021_RESTYPE_3
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column C2021_RESTYPE_3_NAME
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: c8ba2b6b-7c66-480e-93b4-3e75a1bd8d86
+		sourceColumn: C2021_RESTYPE_3_NAME
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column C2021_RESTYPE_3_CODE
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 4ae958c3-e985-45ba-ad17-65554e4635ad
+		sourceColumn: C2021_RESTYPE_3_CODE
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column C2021_RESTYPE_3_TYPE
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: afbb48e6-a53f-43c6-b29e-666d44710e1f
+		sourceColumn: C2021_RESTYPE_3_TYPE
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column C2021_RESTYPE_3_TYPECODE
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: e73e665c-66ef-4e2a-a6b2-153e29c6506f
+		sourceColumn: C2021_RESTYPE_3_TYPECODE
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column C2021_RESTYPE_3_SORTORDER
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 06081656-73bc-4572-a249-b59aceea9f74
+		sourceColumn: C2021_RESTYPE_3_SORTORDER
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEASURES
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 946fb228-3e74-4647-a9b2-f068cea95f87
+		sourceColumn: MEASURES
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column MEASURES_NAME
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: de6fe3fe-30ea-46f1-956c-fa3461fde469
+		sourceColumn: MEASURES_NAME
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBS_VALUE
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: c42e1e57-9598-4969-8303-537ebb3ff4d5
+		sourceColumn: OBS_VALUE
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBS_STATUS
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 8204ab71-8340-4526-b165-0f92251cb0b6
+		sourceColumn: OBS_STATUS
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBS_STATUS_NAME
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 9fab976e-d310-4c2c-8d03-99f4d28fda6f
+		sourceColumn: OBS_STATUS_NAME
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBS_CONF
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 927fa1de-7b18-4ef7-830a-bcd26c62add5
+		sourceColumn: OBS_CONF
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBS_CONF_NAME
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: e025604b-414c-42a5-930b-02d5d3a9b005
+		sourceColumn: OBS_CONF_NAME
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column URN
+		dataType: String
+		isDataTypeInferred: false
+		lineageTag: 0c3bc13a-c124-4079-8257-1fb01a823f6e
+		sourceColumn: URN
+		summarizeBy: None
+
+		annotation SummarizationSetBy = Automatic
+
+	column RECORD_OFFSET
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 0df3b179-fb42-4958-861c-4c54bc61b23f
+		sourceColumn: RECORD_OFFSET
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column RECORD_COUNT
+		dataType: Int64
+		formatString:= 0
+		isDataTypeInferred: false
+		lineageTag: 18fa93ac-6612-47f0-a706-e7641f4ef5f5
+		sourceColumn: RECORD_COUNT
+		summarizeBy: Sum
+
+		annotation SummarizationSetBy = Automatic
+
+	annotation PBI_ResultType = Table
+
+	changedProperty = Name
+
