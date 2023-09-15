@@ -1,10 +1,10 @@
 # mapping in pbi
 
-> a power bi dashboard mapping demos
+> a "shape map" demo combining a topojson ward map and census data from the nomis api
 
-[![screenshot of dashboard](screenshot-of-dashboard.png)](https://app.powerbi.com/groups/me/reports/3b2b3e24-aa51-4bb0-b706-897de39df84c/ReportSection?experience=power-bi)
-
-1. a "shape map" demo combining a topojson ward map and census data from the nomis api
+[![screenshot of dashboard p1](screenshot-of-dashboard-1.png)](https://app.powerbi.com/groups/me/reports/3b2b3e24-aa51-4bb0-b706-897de39df84c/ReportSection?experience=power-bi)
+[![screenshot of dashboard p2](screenshot-of-dashboard-2.png)](https://app.powerbi.com/groups/me/reports/3b2b3e24-aa51-4bb0-b706-897de39df84c/ReportSection?experience=power-bi)
+[![screenshot of dashboard p3](screenshot-of-dashboard-3.png)](https://app.powerbi.com/groups/me/reports/3b2b3e24-aa51-4bb0-b706-897de39df84c/ReportSection?experience=power-bi)
 
 ## contents
 * map - [`lbth-wards-2022.topo.json`](lbth-wards-2022.topo.json)
