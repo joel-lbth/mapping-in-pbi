@@ -74,9 +74,15 @@
                     }
                   },
                   {
-                    "value": "Color saturation",
+                    "value": "Color saturation ",
                     "textStyle": {
                       "fontWeight": "bold",
+                      "fontSize": "32pt"
+                    }
+                  },
+                  {
+                    "value": "to show population levels",
+                    "textStyle": {
                       "fontSize": "32pt"
                     }
                   }

@@ -14,6 +14,6 @@
 * report links together map+data - [`mapping-in-pbi.pbix`](mapping-in-pbi.pbix)
   * the source report (binary file format)
 * [`./mapping-in-pbi/`](mapping-in-pbi)
-  * the source report extracted with [pbi-tools](https://pbi.tools) to a folder of source code that can be edited, version controlled, and recompiled back to a binary `.pbit` file which in turn can be "re-dydrated" with data, and saved as a binary `.pbix`
+  * the source report unpacked with [pbi-tools](https://pbi.tools) (command `pbi-tools extract mapping-in-pbi.pbix`) to a folder of source code (`maping-in-pbi`) that can be edited, version controlled, and recompiled back to a binary `.pbit` file which in turn can be "re-dydrated" with data, and recompiled as a binary `.pbix` report
 * `theme.json`
   * the theme file: sets the corporate slide background image; implements the colour-blind safe [viridis palette](https://matplotlib.org/stable/gallery/color/colormap_reference.html) reversed as the main palette ![alt](https://matplotlib.org/stable/_images/sphx_glr_colormap_reference_008_2_00x.png) (on a light background, [light colours map to low values; dark colours map to high values](https://journals.sagepub.com/stoken/default+domain/10.1177%2F15291006211051956-FREE/full?__cf_chl_tk=0OBvzryGvk5Hx7z2jy2mBy3dCt5vOabVgPzH7I0SkK0-1694038764-0-gaNycGzNDPs#fig18-15291006211051956)). the colours were generated with a pbi friendly [colormap generator](https://waldyrious.net/viridis-palette-generator/)

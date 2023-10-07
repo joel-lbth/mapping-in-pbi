@@ -1,12 +1,20 @@
 model Model
 	compatibilityLevel: 1567
 	culture: en-US
+	dataAccessOptions:
+		legacyRedirects
+		returnErrorValuesAsNull
 	defaultPowerBIDataSourceVersion: PowerBI_V3
 	sourceQueryCulture: en-GB
 
-annotation PBI_QueryOrder = ["population"]
+/// Errors in queries that were loaded on 18/09/2023 10:12:23.
+queryGroup 'Query Errors - 18/09/2023 10:12:23'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_QueryOrder = ["population","waqi - victoria park","waqi - blackwall","Append1","Errors in Append1","Errors in waqi - blackwall"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.120.963.0 (23.08)
+annotation PBIDesktopVersion = 2.121.903.0 (23.09)
 

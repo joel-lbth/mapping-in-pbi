@@ -282,5 +282,5 @@ table population
 
 	annotation PBI_ResultType = Table
 
-	changedProperty = Name
+	annotation PBI_NavigationStepName = Navigation
 
